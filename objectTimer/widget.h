@@ -21,9 +21,10 @@ public:
     virtual void timerEvent(QTimerEvent *event);
 
 private slots:
+    //开始按钮
     void on_startButton_clicked();
 
-
+    //暂停按钮
     void on_stopButton_clicked();
 
 private:
