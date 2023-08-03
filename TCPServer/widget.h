@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QTcpServer>
 #include <QTcpSocket>
+#include "mythread.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -20,6 +21,7 @@ public:
 private slots:
     void newClientHandler();
     void clinetInfoSlot();
+    void threadSlot(QByteArray b);
 private:
     Ui::Widget *ui;
     QTcpServer *server;
