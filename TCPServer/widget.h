@@ -19,7 +19,7 @@ public:
 
 private slots:
     void newClientHandler();
-
+    void clinetInfoSlot();
 private:
     Ui::Widget *ui;
     QTcpServer *server;

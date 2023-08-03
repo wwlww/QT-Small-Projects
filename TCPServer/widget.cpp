@@ -26,4 +26,13 @@ void Widget::newClientHandler()
     ui->ipLineEdit->setText(socket->peerAddress().toString());
     ui->portLineEdit->setText(QString::number(socket->peerPort()));
 
+    //服务器接受客户端发送的消息
+    connect(socket,&QTcpSocket::readyRead,this,&Widget::clinetInfoSlot);
+}
+
+void Widget::clinetInfoSlot()
+{
+    //获取信号的发出者
+    QTcpSocket *s = (QTcpSocket *)sender();
+    ui->receveLineEdit->setText(QString(s->readAll()));
 }
