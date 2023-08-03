@@ -32,7 +32,7 @@ void Widget::newClientHandler()
 
 void Widget::clinetInfoSlot()
 {
-    //获取信号的发出者
+    //sender():获取信号的发出者
     QTcpSocket *s = (QTcpSocket *)sender();
     ui->receveLineEdit->setText(QString(s->readAll()));
 }
