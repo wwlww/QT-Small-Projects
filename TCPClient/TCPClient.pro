@@ -16,13 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    chat.cpp \
     main.cpp \
     widget.cpp
 
 HEADERS += \
+    chat.h \
     widget.h
 
 FORMS += \
+    chat.ui \
     widget.ui
 
 # Default rules for deployment.

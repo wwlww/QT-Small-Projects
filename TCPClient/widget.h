@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QTcpSocket>
 #include <QHostAddress>
+#include"chat.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }

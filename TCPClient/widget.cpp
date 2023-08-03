@@ -32,6 +32,10 @@ void Widget::on_connectButton_clicked()
 
     connect(socket,&QTcpSocket::connected,[this](){
         QMessageBox::information(this,"连接提示","连接成功");
+
+        this->hide();
+        chat *c=new chat(socket);
+        c->show();
     });
 
     connect(socket,&QTcpSocket::disconnected,[this](){
