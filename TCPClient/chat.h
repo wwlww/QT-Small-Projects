@@ -2,7 +2,8 @@
 #define CHAT_H
 
 #include <QWidget>
-#include<QTcpSocket>
+#include <QTcpSocket>
+#include <QKeyEvent>
 namespace Ui {
 class chat;
 }
@@ -20,6 +21,8 @@ private slots:
     void on_clearButton_clicked();
 
     void on_sendButton_clicked();
+
+    void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::chat *ui;
