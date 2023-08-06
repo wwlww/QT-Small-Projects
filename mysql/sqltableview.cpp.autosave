@@ -1,0 +1,22 @@
+#include "sqltableview.h"
+#include "ui_sqltableview.h"
+
+sqltableview::sqltableview(QSqlDatabase *db,QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::sqltableview)
+{
+    ui->setupUi(this);
+    mydb = db;
+    
+    //创建sqltablemodel对象并指定sql中的表
+    m = new QSqlTableModel;
+    m->setTable("student");
+    ui->tableView->setModel(m);
+    //显示表
+    m->select();
+}
+
+sqltableview::~sqltableview()
+{
+    delete ui;
+}
